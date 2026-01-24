@@ -11,7 +11,8 @@ export default function useHeaderColor(defaultColor: "black" | "white" = "black"
         entries.forEach((entry) => {
           // If the top of the section hits the top of viewport
           if (entry.isIntersecting && entry.boundingClientRect.top <= 0) {
-            const bg = entry.target.dataset.bg;
+            const target = entry.target as HTMLElement;
+            const bg = target.dataset.bg;
             if (bg === "dark") setColor("white");
             else setColor("black");
           }

@@ -38,8 +38,11 @@ export default function EstimatorTool() {
                     placeholder="Dropoff" 
                 />
                 <a 
-                    onclick={setMoveCookie(pickup, dropoff, moveType)} 
-                    href={process.env.NEXT_PUBLIC_ESTIMATOR_URL}
+                    onClick={(e) => {
+                        e.preventDefault();  // optional, if you want to handle navigation yourself
+                        setMoveCookie(pickup, dropoff, moveType);
+                        window.location.href = process.env.NEXT_PUBLIC_ESTIMATOR_URL!;
+                    }}
                     className="slide-animate-y opacity-0 translate-y-[50px] duration-600 delay-400 transition-all ease-out w-full mt-4 max-md:mt-6 bg-[var(--primary)] p-3.5 max-md:p-5 font-medium text-[15px] text-white text-center cursor-pointer rounded-xl hover:animate-[gradient_0.3s_ease-in-out] active:animate-[active_0.2s_ease-in-out]"
                 >Find Truck</a>
             </div>
