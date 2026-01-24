@@ -3,7 +3,7 @@ import { useState } from "react";
 type RadioOption = {
   id: string;
   label: string;
-  svg: string;
+  svg: ReactNode;
 };
 
 type RadioGroupProps = {
