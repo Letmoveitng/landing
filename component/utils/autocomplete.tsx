@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { ReactNode, useState, useEffect, useRef } from "react";
 
 interface Prediction {
   description: string;
@@ -10,7 +10,7 @@ interface AutocompleteResponse {
 
 interface AutocompleteProps {
   value: string;
-  svg: string;
+  svg: ReactNode;
   delay: string;
   setValue: (val: string) => void;
   placeholder: string;

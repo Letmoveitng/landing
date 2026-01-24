@@ -90,7 +90,7 @@ export default function Reviews() {
                 style={{ x }}
                 className="flex items-center space-x-5"
             >
-                {[...reviews,...reviews,,...reviews].map((r,idx)=>(
+                {[...reviews, ...reviews, ...reviews].map((r,idx)=>(
                     <div key={idx} className="w-[220px] min-w-[220px] h-[187px] p-4 pr-7 bg-white flex flex-col justify-between rounded-tl-[0px] rounded-[30px] space-y-2">
                         <div className="w-[40px] h-[40px] bg-[#CCC] bg-no-repeat bg-cover bg-center rounded-full" style={{ backgroundImage: `url(${r.profile})` }}></div>
                         <p className="font-normal text-[7pt]">{r.review}</p>
