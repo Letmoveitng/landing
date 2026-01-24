@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+html {
+  --primary: #5AA36A;
+  --secondary: #78C589;
+  --blue: #47A5DA;
+
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +19,320 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
+@keyframes active {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-22px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slide-out-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes collapse {
+  0% {
+    height: 70px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes expand {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 70px;
+  }
+}
+
+  
+
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
+  font-family: "Onest";
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.bg-hero-truck{
+  background-image: url('/hero-truck.svg');
+}
+.bg-service-residential {
+  background-color: #FAFAFA;
+  background-image: linear-gradient(0deg, transparent 45%, #22222277 100%), url('/mobile_move_estimator.png'), url('/service-residential.png');
+  background-size: cover, 80%, cover;
+  background-position: top, center 110%, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.bg-service-residential:hover {
+  animation: service-residential .7s;
+}
+.bg-service-business {
+  background-color: #FAFAFA;
+  background-image: linear-gradient(0deg, #22222277, #22222277), url('/service-business.png');
+  background-size: cover, cover;
+  background-position: top, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.bg-service-item-delivery { 
+  background-color: #FAFAFA;
+  background-image: url('/mobile_move_delivery.png'), linear-gradient(0deg, #222222DD 45%, #222222DD 100%), url('/service-item-delivery.png');
+  background-size: 80%, cover, cover;
+  background-position: center 130%, top, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.bg-service-item-delivery:hover {
+  animation: service-item-delivery .7s;
+}
+.bg-service-loader {
+  background-color: #FAFAFA;
+  background-image: linear-gradient(0deg, #22222277, #22222277), url('/service-loader.png');
+  background-size: cover, cover;
+  background-position: top, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.bg-service-business-solution {
+  background-color: #FAFAFA;
+  background-image: linear-gradient(0deg, #22222277, #22222277), url('/service-business-solution.png');
+  background-size: cover, cover;
+  background-position: top, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.bg-comic {
+  background-color: black;
+  background-image: url('/truck-comic.png'), url('/green-comic-background.png');
+  /* background-size: 25%, cover; */
+  background-position: bottom right, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 0.6px;  /* Thin width */
+    height: 2px;
+  }
+  .scrollbar-thin:hover::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.7); /* gray-400 */
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(107, 114, 128, 0.9); /* darker gray */
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-brand::-webkit-scrollbar-thumb {
+    background-color: #78C58988; /* gray-400 */
+    cursor: pointer;
+  }
+  .scrollbar-brand::-webkit-scrollbar-thumb:hover {
+    background-color: #5AA36A88; /* darker gray */
+    cursor: pointer;
+  }
+  .scrollbar-brand-thick::-webkit-scrollbar-thumb {
+    background-color: #78C589; /* gray-400 */
+    cursor: pointer;
+  }
+  .scrollbar-brand-thick::-webkit-scrollbar-thumb:hover {
+    background-color: #5AA36A; /* darker gray */
+    cursor: pointer;
+  }
+
+@keyframes service-residential {
+  0% {
+    background-color: #FAFAFA;
+    background-image: linear-gradient(0deg, transparent 45%, #22222277 100%), url('/mobile_move_estimator.png'), url('/service-residential.png');
+    background-size: cover, 80%, cover;
+    background-position: top, center 200%, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  100% {
+    background-color: #FAFAFA;
+    background-image: linear-gradient(0deg, transparent 45%, #22222277 100%), url('/mobile_move_estimator.png'), url('/service-residential.png');
+    background-size: cover, 80%, cover;
+    background-position: top, center 110%, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+}
+@keyframes service-item-delivery {
+  0% {
+    background-color: #FAFAFA;
+    background-image: url('/mobile_move_delivery.png'), linear-gradient(0deg, #222222DD 45%, #222222DD 100%), url('/service-item-delivery.png');
+    background-size: 80%, cover, cover;
+    background-position: center 320%, top, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  100% {
+    background-color: #FAFAFA;
+    background-image: url('/mobile_move_delivery.png'), linear-gradient(0deg, #222222DD 45%, #222222DD 100%), url('/service-item-delivery.png');
+    background-size: 80%, cover, cover;
+    background-position: center 130%, top, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+}
+
+@keyframes gradient {
+    0% {
+        background: linear-gradient(70deg, #5AA36A, #78C589, #5AA36A);
+    }
+    50% {
+        background: linear-gradient(70deg, #78C589, #5AA36A, #78C589);
+    }
+    100% {
+        background: linear-gradient(70deg, #5AA36A, #78C589, #5AA36A);
+    }
+}
+
+@keyframes flow2 {
+  50% { transform: translateX(3em); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes flow3 {
+  50% { transform: translateX(-3em); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes flow4 {
+  50% { transform: translateY(3em); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes flow5 {
+  50% { transform: translateY(-3em); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes flow6 {
+  30% { transform: translateX(3em); }
+  60% { transform: translateX(3em) translateY(-3em); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes flow7 {
+  30% { transform: translateX(-3em); }
+  60% { transform: translateX(-3em) translateY(3em); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes flow8 {
+  30% { transform: translateY(3em); }
+  60% { transform: translateY(3em) translateX(3em); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes flow9 {
+  30% { transform: translateY(-3em); }
+  60% { transform: translateY(-3em) translateX(-3em); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+
+
+
+.services-track:active {
+  cursor: grabbing;
+}
+
+.service-card {
+  scroll-snap-stop: always;
+}
+
+
+/* hide scrollbar (optional) */
+.services-track::-webkit-scrollbar {
+  display: none;
+}
+.services-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+
+
+.build-box {
+  animation: build-box 1.2s ease-in-out infinite;
+}
+
+.active {
+  animation: active 0.2s ease-in-out;
+}
+
+.active-infinite {
+  animation: active 0.9s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+.slide-out-up {
+  animation: slide-out-up 0.3s ease-in;
+}
+
+.slide-in-up {
+  animation: slide-in-up 0.3s ease-in forwards;
+}
+
+.collapse {
+  animation: collapse 0.3s ease-out forwards;
+}
+
+.expand {
+  animation: expand 0.3s ease-in forwards;
 }
