@@ -72,54 +72,54 @@ export default function Header() {
                         <div className="w-full flex justify-between px-10 py-5">
                             <div className="w-full flex text-left justify-between space-x-5">
                                 <div className="max-w-max flex flex-col space-y-4">
-                                    <h4 className="bg-white px-5 py-2 text-[1vw] text-center font-medium rounded-md">Product</h4>
-                                    <div className="flex flex-col items-center">
+                                    <h4 className="py-2 text-[1vw] text-left font-medium rounded-md">Product</h4>
+                                    <div className="flex flex-col items-start">
                                         <div className="flex flex-col items-start text-[0.842vw] font-normal space-y-4">
-                                            <a href="#">Residential</a>
-                                            <a href="#">Business</a>
-                                            <a href="#">Item Delivery</a>
-                                            <a href="#">Marketplace</a>
-                                            <a href="#">API for Business</a>
-                                            <a href="#">Okeru.ai</a>
-                                            <a href="#">Coperate</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Residential</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Business</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Item Delivery</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Marketplace</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">API for Business</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Okeru.ai</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Coperate</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="max-w-max flex flex-col space-y-4">
-                                    <h4 className="bg-transparent px-0 py-2 text-left text-[1vw] font-medium rounded-md">Earn</h4>
-                                    <div className="flex flex-col items-center">
+                                    <h4 className="py-2 text-[1vw] text-left font-medium rounded-md">Earn</h4>
+                                    <div className="flex flex-col items-start">
                                         <div className="flex flex-col items-start text-[0.842vw] font-normal space-y-4">
-                                            <a href="#">Truck Owner</a>
-                                            <a href="#">Loader</a>
-                                            <a href="#">Agent</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Truck Owner</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Loader</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Agent</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="max-w-max flex flex-col space-y-4">
-                                    <h4 className="bg-transparent px-0 py-2 text-left text-[1vw] font-medium rounded-md">Company</h4>
-                                    <div className="flex flex-col items-center">
+                                    <h4 className="py-2 text-[1vw] text-left font-medium rounded-md">Company</h4>
+                                    <div className="flex flex-col items-start">
                                         <div className="flex flex-col items-start text-[0.842vw] font-normal space-y-4">
-                                            <a href="#">Mission</a>
-                                            <a href="#">Careers</a>
-                                            <a href="#">News</a>
-                                            <a href="#">Team</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Mission</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Careers</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">News</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Team</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="max-w-max flex flex-col space-y-4">
                                     <h4 className="bg-transparent px-0 py-2 text-left text-[1vw] font-medium rounded-md">Support</h4>
-                                    <div className="flex flex-col items-center">
+                                    <div className="flex flex-col items-start">
                                         <div className="flex flex-col items-start text-[0.842vw] font-normal space-y-4">
-                                            <a href="#">Call</a>
-                                            <a href="#">Email</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Call</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Email</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="max-w-max flex flex-col space-y-6">
                                     <h4 className="bg-transparent px-0 py-2 text-left text-[1vw] font-medium rounded-md">Garage</h4>
-                                    <div className="flex flex-col items-center">
+                                    <div className="flex flex-col items-start">
                                         <div className="flex flex-col items-start text-[0.842vw] font-normal space-y-4">
-                                            <a href="#">Find us</a>
+                                            <a href="#" className="hover:text-[var(--primary)]">Find us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -236,72 +236,136 @@ export default function Header() {
                                 <summary className="flex items-center justify-between cursor-pointer text-lg font-medium list-none">
                                     Product
                                     <span className="transition-transform duration-300 group-open:rotate-180">
-                                    ▼
+                                    <svg
+                                        className="
+                                        w-4 h-4 transition-transform duration-300
+                                        group-open:-rotate-360
+                                        md:hidden
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
                                     </span>
                                 </summary>
 
                                 <div className="mt-3 pl-3 flex flex-col items-start space-y-3 text-sm text-black/80">
-                                    <a href="#">Residential</a>
-                                    <a href="#">Business</a>
-                                    <a href="#">Item Delivery</a>
-                                    <a href="#">Marketplace</a>
-                                    <a href="#">API for Business</a>
-                                    <a href="#">Okeru.ai</a>
-                                    <a href="#">Corporate</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Residential</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Business</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Item Delivery</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Marketplace</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">API for Business</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Okeru.ai</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Corporate</a>
                                 </div>
                             </details>
                             <details className="group border-b border-black/10 pb-1">
                                 <summary className="flex items-center justify-between cursor-pointer text-lg font-medium list-none">
                                     Earn
                                     <span className="transition-transform duration-300 group-open:rotate-180">
-                                    ▼
+                                    <svg
+                                        className="
+                                        w-4 h-4 transition-transform duration-300
+                                        group-open:-rotate-360
+                                        md:hidden
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+
                                     </span>
                                 </summary>
 
                                 <div className="mt-3 pl-3 flex flex-col items-start space-y-3 text-sm text-black/80">
-                                    <a href="#">Truck Owner</a>
-                                    <a href="#">Loader</a>
-                                    <a href="#">Agent</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Truck Owner</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Loader</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Agent</a>
                                 </div>
                             </details>
                             <details className="group border-b border-black/10 pb-1">
                                 <summary className="flex items-center justify-between cursor-pointer text-lg font-medium list-none">
                                     Company
                                     <span className="transition-transform duration-300 group-open:rotate-180">
-                                    ▼
+                                    <svg
+                                        className="
+                                        w-4 h-4 transition-transform duration-300
+                                        group-open:-rotate-360
+                                        md:hidden
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+
                                     </span>
                                 </summary>
 
                                 <div className="mt-3 pl-3 flex flex-col items-start space-y-3 text-sm text-black/80">
-                                    <a href="#">Mission</a>
-                                    <a href="#">Careers</a>
-                                    <a href="#">News</a>
-                                    <a href="#">Team</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Mission</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Careers</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">News</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Team</a>
                                 </div>
                             </details>
                             <details className="group border-b border-black/10 pb-1">
                                 <summary className="flex items-center justify-between cursor-pointer text-lg font-medium list-none">
                                     Support
                                     <span className="transition-transform duration-300 group-open:rotate-180">
-                                    ▼
+                                    <svg
+                                        className="
+                                        w-4 h-4 transition-transform duration-300
+                                        group-open:-rotate-360
+                                        md:hidden
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+
                                     </span>
                                 </summary>
 
                                 <div className="mt-3 pl-3 flex flex-col items-start space-y-3 text-sm text-black/80">
-                                    <a href="#">Call</a>
-                                    <a href="#">Email</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Call</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Email</a>
                                 </div>
                             </details>
                             <details className="group border-b border-black/10 pb-1">
                                 <summary className="flex items-center justify-between cursor-pointer text-lg font-medium list-none">
                                     Garage
                                     <span className="transition-transform duration-300 group-open:rotate-180">
-                                    ▼
+                                    <svg
+                                        className="
+                                        w-4 h-4 transition-transform duration-300
+                                        group-open:-rotate-360
+                                        md:hidden
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+
                                     </span>
                                 </summary>
 
                                 <div className="mt-3 pl-3 flex flex-col items-start space-y-3 text-sm text-black/80">
-                                    <a href="#">Find us</a>
+                                    <a href="#" className="hover:text-[var(--primary)]">Find us</a>
                                 </div>
                             </details>
                             <div className="w-full mt-3">

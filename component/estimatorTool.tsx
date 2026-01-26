@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import RadioGroup from "./utils/radioGroup"
 import Autocomplete from "./utils/autocomplete"
 import { setMoveCookie } from "@utils/cookies"
+import { logMessage } from "@utils/index"
 
 const options = [
   { id: "1", label: "Residential", svg: <svg className="w-[.9vw] max-md:w-[2.5vw] h-auto" xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="currentColor"><path d="M4.35 10.7C4.59853 10.7 4.8 10.4985 4.8 10.25V7.55C4.8 7.30147 5.00147 7.1 5.25 7.1H6.75C6.99853 7.1 7.2 7.30147 7.2 7.55V10.25C7.2 10.4985 7.40147 10.7 7.65 10.7H9.75C9.99853 10.7 10.2 10.4985 10.2 10.25V6.35C10.2 6.10147 10.4015 5.9 10.65 5.9H10.8273C11.2397 5.9 11.4349 5.39141 11.1284 5.11552L6.30103 0.770931C6.1299 0.616907 5.8701 0.616907 5.69897 0.770931L0.871647 5.11552C0.565099 5.39141 0.760264 5.9 1.17268 5.9H1.35C1.59853 5.9 1.8 6.10147 1.8 6.35V10.25C1.8 10.4985 2.00147 10.7 2.25 10.7H4.35Z"/></svg> },
@@ -40,8 +41,18 @@ export default function EstimatorTool() {
                 <a 
                     onClick={(e) => {
                         e.preventDefault();  // optional, if you want to handle navigation yourself
-                        setMoveCookie(pickup, dropoff, moveType);
-                        window.location.href = process.env.NEXT_PUBLIC_ESTIMATOR_URL!;
+                        if(pickup && dropoff && moveType) {
+                            setMoveCookie(pickup, dropoff, moveType);
+                            window.location.href = process.env.NEXT_PUBLIC_ESTIMATOR_URL!;
+                        }else {
+                            if(!pickup) {
+                                logMessage("error", `Kindly selected your pickup location`)
+                            }else if(!dropoff) {
+                                logMessage("error", `Kindly selected your dropoff location`)
+                            }else if(!moveType) {
+                                logMessage("error", `Kindly selected your move type`)
+                            }
+                        }
                     }}
                     className="slide-animate-y opacity-0 translate-y-[50px] duration-600 delay-400 transition-all ease-out w-full mt-4 max-md:mt-6 bg-[var(--primary)] p-3.5 max-md:p-5 font-medium text-[15px] text-white text-center cursor-pointer rounded-xl hover:animate-[gradient_0.3s_ease-in-out] active:animate-[active_0.2s_ease-in-out]"
                 >Find Truck</a>
