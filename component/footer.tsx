@@ -97,7 +97,7 @@ export default function Footer() {
               </svg>
             </summary>
 
-            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 max-md:pb-4 max-md:px-2">
+            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 pointer-events-auto max-md:pb-4 max-md:px-2">
               <a href="#">Truck Owner</a>
               <a href="#">Loader</a>
               <a href="#">Agent</a>
@@ -128,7 +128,7 @@ export default function Footer() {
               </svg>
             </summary>
 
-            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 max-md:pb-4 max-md:px-2">
+            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 pointer-events-auto max-md:pb-4 max-md:px-2">
               <a href="#">Mission</a>
               <a href="#">Careers</a>
               <a href="#">News</a>
@@ -160,7 +160,7 @@ export default function Footer() {
               </svg>
             </summary>
 
-            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 max-md:pb-4 max-md:px-2">
+            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 pointer-events-auto max-md:pb-4 max-md:px-2">
               <a href="#">Call</a>
               <a href="#">Email</a>
             </div>
@@ -190,7 +190,7 @@ export default function Footer() {
               </svg>
             </summary>
 
-            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 max-md:pb-4 max-md:px-2">
+            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 pointer-events-auto max-md:pb-4 max-md:px-2">
               <a href="#">Find us</a>
             </div>
           </details>
@@ -219,7 +219,7 @@ export default function Footer() {
               </svg>
             </summary>
 
-            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:pb-4 max-md:px-2">
+            <div className="flex flex-col text-[10pt] font-normal space-y-4 max-md:space-y-6 pointer-events-auto max-md:pb-4 max-md:px-2">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of service</a>
               <a href="#">Terms of Drivers</a>
