@@ -2,29 +2,36 @@
 import { useEffect, useRef } from "react";
 
 export default function Footer() {
-  const detailsRefs = useRef([]);
+
+  const detailsRefs = useRef<HTMLDetailsElement[]>([]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
+    
+    // Initialize open state
     detailsRefs.current.forEach((d) => {
       if (d) d.open = mq.matches;
     });
 
-    const handler = (e) => {
+    // Handler for media query change
+    const handler = (e: MediaQueryListEvent) => {
       detailsRefs.current.forEach((d) => {
         if (d) d.open = e.matches;
       });
     };
+
     mq.addEventListener("change", handler);
 
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  const addToRefs = (el) => {
+  // Function to add elements to refs
+  const addToRefs = (el: HTMLDetailsElement | null) => {
     if (el && !detailsRefs.current.includes(el)) {
       detailsRefs.current.push(el);
     }
   };
+
 
   return (
     <footer className="bg-black text-white w-full flex flex-col space-x-1">
