@@ -18,14 +18,11 @@ const onest = Onest({
   variable: "--font-onest",
 });
 
-import { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Letmoveit.ng",
   description: "Move stress-free with LetmoveIt.ng, Nigeria’s top choice for reliable, eco-friendly moving services. Whether you're relocating your home or business, our advanced move estimate calculator and professional packing solutions ensure a seamless experience.",
   keywords: ["Letmoveit", "letmoveit.ng", "Letmoveit ng", "Letmoveit Abuja", "Letmoveit Nigeria"],
   applicationName: "Letmoveit.ng",
-  developer: [{ name: "PeeCee Devs", email: "ibehpromise45@gmail.com" }],
   viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0",
   icons: {
     icon: "https://www.letmoveit.ng/assets/images/logo.png",
