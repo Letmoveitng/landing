@@ -282,6 +282,11 @@ button {
 
 
 
+input, textarea, select {
+  font-size: 16px;
+}
+
+
 
 .services-track:active {
   cursor: grabbing;

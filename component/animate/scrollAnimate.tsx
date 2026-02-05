@@ -13,7 +13,6 @@ export default function useMultiScrollAnimate(configs: AnimateConfig[]) {
       const elements = document.querySelectorAll<HTMLElement>(`.${targetClass}`);
 
       elements.forEach(el => {
-        // store the initial classes to restore later
         const initialClasses = Array.from(el.classList);
 
         const observer = new IntersectionObserver(
@@ -24,10 +23,8 @@ export default function useMultiScrollAnimate(configs: AnimateConfig[]) {
                 const resetClasses = initialClasses.filter(cls => !cls.startsWith("opacity-") && !cls.startsWith("translate-"));
                 el.className = resetClasses.join(" ");
 
-                // add animation classes
                 el.classList.add(...animationClasses.split(" "));
               } else {
-                // restore initial classes (back to hidden)
                 el.className = initialClasses.join(" ");
               }
             });
