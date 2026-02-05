@@ -14,5 +14,8 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 
-EXPOSE 80
+# Make sure the app listens on the correct port
+ENV PORT=2225
+
+EXPOSE 2225
 CMD ["node", "server.js"]
