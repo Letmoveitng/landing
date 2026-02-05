@@ -67,7 +67,7 @@ export default function Autocomplete({ value, setValue, svg, delay, placeholder 
           placeholder={placeholder}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="w-full h-full p-2 text-sm placeholder-[#00000099] text-black outline-none"
+          className="w-full h-full p-2 placeholder-[#00000099] text-black outline-none"
         />
       </div>
 
