@@ -60,14 +60,14 @@ export default function Autocomplete({ value, setValue, svg, delay, placeholder 
 
   return (
     <div ref={containerRef} className="relative w-full autocomplete-container">
-      <div className={`slide-animate-y opacity-0 translate-y-35 duration-600 delay-${delay} transition-all ease-out bg-white w-full h-12 flex items-center p-3 mt-2 border border-[var(--primary)] rounded-xl`}>
+      <div className={`slide-animate-y opacity-0 translate-y-35 duration-600 delay-${delay} transition-all ease-out bg-white w-full h-12 flex items-center px-3 mt-2 border border-[var(--primary)] rounded-xl`}>
         {svg}
         <input
           type="text"
           placeholder={placeholder}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="w-full h-full p-2 placeholder-[#00000099] text-black outline-none"
+          className="max-height w-full h-full min-h-full px-2 placeholder-[#00000099] text-black outline-none"
         />
       </div>
 
